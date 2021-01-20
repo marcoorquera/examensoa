@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+
+<xsd:schema version="1.0"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified">
+    <xsd:element name="factura">
+        <xsd:complexType >
+            <xsd:sequence>
+                <xsd:element name="registro" maxOccurs="unbounded">
+                    <xsd:complexType >
+                        <xsd:sequence>
+                            <xsd:element name="codigo" type="restriccion8"/>
+                            <xsd:element name="ruc" type="xsd:int"/>
+                            <xsd:element name="cedula" type="xsd:string"/>
+                            <xsd:element name="nombre" type="xsd:string" minOccurs="1"/>
+                            <xsd:element name="apellido" type="xsd:string"/>
+                            <xsd:element name="fecha" type="restriccion4"/>
+                            <xsd:element name="telefono" type="resticcion1"/>
+                            <xsd:element name="direccion" type="resticcion5"/>
+                            <xsd:element name="cantidad" type="xsd:int"/>
+                            <xsd:element name="detalle" type="resticcion5"/>
+                            <xsd:element name="forma_pago" type="restriccion6"/>
+                            <xsd:element name="total" type="xsd:double"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    
+    <!--RESTRICCIONES A SER INVOCADAS-->    
+    <xsd:simpleType name="resticcion1">                       
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[0-9]*"/>
+            <xsd:minLength value="7"/>
+            <xsd:maxLength value="10"/>
+        </xsd:restriction>    
+    </xsd:simpleType>
+    
+
+    <xsd:simpleType name="restriccion2">
+        <xsd:restriction base="xsd:integer">
+            <xsd:minInclusive value="1"/>
+            <xsd:maxInclusive value="31"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+ 
+    <xsd:simpleType name="restriccion3">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="Julio"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <xsd:simpleType name="restriccion4">
+        <xsd:restriction base="xsd:integer">
+            <xsd:minInclusive value="2012"/>
+            <xsd:maxInclusive value="2021"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <xsd:simpleType name="resticcion5">                       
+        <xsd:restriction base="xsd:string">
+            <xsd:minLength value="0"/>
+            <xsd:maxLength value="50"/>
+        </xsd:restriction>    
+    </xsd:simpleType>
+    
+    <xsd:simpleType name="restriccion6">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="Efectivo"/>
+            <xsd:enumeration value="Dinero Electrónico"/>
+            <xsd:enumeration value="Tarjeta de crédito"/>
+            <xsd:enumeration value="Tarjeta de debito"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <xsd:simpleType name="restriccion8">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="SRI3635"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+</xsd:schema>

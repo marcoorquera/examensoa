@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<factura xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="facturaxsd.xsd">
+    <registro>
+        <codigo>SRI3635</codigo>
+        <ruc>1725994956</ruc>
+        <cedula>1725994956</cedula>
+        <nombre>Gabo</nombre>
+        <apellido>Ibujes</apellido>
+        <fecha>2021</fecha>
+        <telefono>983194547</telefono>
+        <direccion>comite</direccion>
+        <cantidad>10</cantidad>
+        <detalle>peluches para la nueva y la ex</detalle>
+        <forma_pago>Efectivo</forma_pago>
+        <total>100</total>
+    </registro>
+</factura>

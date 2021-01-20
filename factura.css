@@ -1,0 +1,77 @@
+registro, img,h1 {
+  display: table;
+  border-spacing: 10px;
+  border: black 1px solid;
+  padding:10px; 
+  background-color:whitesmoke;
+  margin: auto;
+}
+
+codigo, ruc, cedula{
+  
+  border: black 1px solid;
+  display: block;
+}
+
+nombre,apellido,fecha,telefono{
+  border: black 1px solid;
+  display: block;
+}
+
+direccion,cantidad,detalle,forma_pago,total{
+  border: black 1px solid;
+  display: block;
+}
+
+codigo:before{
+    content: "Código de la factura : ";
+    color: blue;
+}
+
+ruc:before{
+    content: "Ruc : ";
+    color: blue;
+}
+
+cedula:before{
+    content: "Cédula de Identidad : ";
+    color: blue;
+}
+
+nombre:before{
+    content: "Nombre: ";
+    color: blue;
+}
+
+apellido:before{
+    content: "Apellido: ";
+    color: blue;
+}
+fecha:before{
+    content: "Día de compra : ";
+    color: blue;
+}
+telefono:before{
+    content: "Teléf celular/convencional : ";
+    color: blue;
+}
+direccion:before{
+    content: "Dirección : ";
+    color: blue;
+}
+cantidad:before{
+    content: "Cantidad de compra : ";
+    color: blue;
+}
+detalle:before{
+    content: "Descripción de la compra : ";
+    color: blue;
+}
+forma_pago:before{
+    content: "Forma de Pago : ";
+    color: blue;
+}
+total:before{
+    content: "Total a Pagar : ";
+    color: blue;
+}
